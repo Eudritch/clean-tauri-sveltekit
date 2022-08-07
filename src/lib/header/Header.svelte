@@ -5,8 +5,8 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+		<a href="https://github.com/Eudritch/clean-tauri-sveltekit">
+			<img src={logo} alt="SvelteKit-Tauri" />
 		</a>
 	</div>
 

@@ -4,10 +4,10 @@
 
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
-	document.body.insertAdjacentHTML(
-		'afterbegin',
-		'<img class="background" src="/DALL·E generated image.png" alt="" />'
-	);
+	// document.body.insertAdjacentHTML(
+	// 	'afterbegin',
+	// 	'<img class="background" src="/DALL·E generated image.png" alt="" />'
+	// );
 </script>
 
 <svelte:head>
@@ -30,13 +30,6 @@
 </section>
 
 <style>
-	:global(body .background) {
-		position: fixed;
-		width: 100%;
-		z-index: -1;
-		background-size: contain;
-		background-repeat: repeat-y;
-	}
 	section {
 		display: flex;
 		flex-direction: column;

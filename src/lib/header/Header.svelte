@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './sveltekit-tauri.png';
+	import logo from './svelte-logo.svg';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://github.com/Eudritch/clean-tauri-sveltekit">
-			<img src={logo} alt="SvelteKit-Tauri" />
+		<a href="https://kit.svelte.dev">
+			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
 

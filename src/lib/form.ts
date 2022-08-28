@@ -34,10 +34,10 @@ export function enhance(
 ) {
 	let current_token: unknown;
 
-	async function handle_submit(e: SubmitEvent) {
+	async function handle_submit(event: SubmitEvent) {
 		const token = (current_token = {});
 
-		e.preventDefault();
+		event.preventDefault();
 
 		const data = new FormData(form);
 
@@ -56,20 +56,17 @@ export function enhance(
 
 			if (response.ok) {
 				if (result) result({ data, form, response });
-
-				const url = new URL(form.action);
-				url.search = url.hash = '';
-				invalidate(url.href);
+				invalidate();
 			} else if (error) {
 				error({ data, form, error: null, response });
 			} else {
 				console.error(await response.text());
 			}
-		} catch (e: unknown) {
-			if (error && e instanceof Error) {
-				error({ data, form, error: e, response: null });
+		} catch (err: unknown) {
+			if (error && err instanceof Error) {
+				error({ data, form, error: err, response: null });
 			} else {
-				throw e;
+				throw err;
 			}
 		}
 	}

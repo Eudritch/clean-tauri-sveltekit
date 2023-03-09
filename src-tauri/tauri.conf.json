@@ -1,27 +1,25 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "",
     "beforeDevCommand": "",
-    "devPath": "http://localhost:8082",
-    "distDir": "../dist"
+    "beforeBuildCommand": "",
+    "devPath": "http://localhost:5173/",
+    "distDir": "../dist",
+    "withGlobalTauri": true
   },
   "package": {
-    "productName": "SvelteKit-Tauri-Template",
+    "productName": "sveltekit-tauri-app",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
-      "deb": {
-        "depends": []
-      },
-      "externalBin": [],
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -30,22 +28,7 @@
         "icons/icon.ico"
       ],
       "identifier": "com.tauri.dev",
-      "longDescription": "",
-      "macOS": {
-        "entitlements": null,
-        "exceptionDomain": "",
-        "frameworks": [],
-        "providerShortName": null,
-        "signingIdentity": null
-      },
-      "resources": [],
-      "shortDescription": "",
-      "targets": "all",
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
+      "targets": "all"
     },
     "security": {
       "csp": null
@@ -56,10 +39,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
-        "title": "Tauri-template",
-        "width": 800
+        "title": "sveltekit-tauri-app",
+        "width": 800,
+        "height": 600
       }
     ]
   }
